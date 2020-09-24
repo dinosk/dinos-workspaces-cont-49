@@ -1,0 +1,24 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  creationTimestamp: null
+  name: github-token
+  namespace: wkp-workspaces
+spec:
+  encryptedData:
+    token: AgBNRGuBFlt/32OZ3s1y7YzPqIqIFks9iVePbXLQkk6btaTYHqSWYQ4UVP+XrXbuRdwwssL+klDXkR6Fcq24iiOgjWyhh/byMDaN3UhsiqdJZMOW0NBP8vhMUI968v8/nMjm4PFciieNhxBkFIDZb7wB13E7h9N7gUDeCiX/CiN6Vzbh4D2Ons7i/bZeJi9+Yxwls45Bg9Jf1KU02LJvXyIfqGyG/5ZHhCEx+fljJQylWtugR6FfPV1mU+eCUGTilD2xzSxbCl/FfOP21Jkvhnj3SdfC8+IldgXAh8RFrOQn+X1dvRdZX6XYDNKeQO5nbPZQmdxoxjRg2zFMpGxSib4O7pgQDznHM6+3JvJUaNyNgepToO9A/bdg/IJX0Ee+KbYyffDs0QsUArN/1prSxx+x5XSasMEBf7qaKhNLcBjHOnKKd3YN0Ha80hrg4uFdw6pPhUrZfB7hPT+rLOSHFwpSRO9/XgYuDUcOLrccpban9IgMV4GLCVcydWa2/zpfOMwJoV1zyEy7SCY/7VG+iyUpJuV/wcN0rCuHdWrqk/I/EKrS8+NcGN7N5X00T6T2N2TTdBt73McqETuwPeAjn5hGn1uf7mFOzCaN/z8a/gdJWQMPgOl5xEX8+p+r3KLj3HBZFCHHt5iscTm5bMpGiFQhxLsbIBizWWnKz8FG8tyR0bJaSkGW3Ai4ABOHYi3jhmnqKk+QNIDckTObt94uMG47W6Oz9e+mqR06vbe+guamiHrI2zLF0vjb
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+        wkp.weave.works/git-provider-hostname: github.com
+        wkp.weave.works/git-provider-type: github
+      creationTimestamp: null
+      labels:
+        wkp.weave.works/type: git-provider-token
+      name: github-token
+      namespace: wkp-workspaces
+status: {}
+
